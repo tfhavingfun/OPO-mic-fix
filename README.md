@@ -15,25 +15,25 @@ _Please note that your device has to be rooted to edit the `build.prop` file._
 1. Check if your device if reocgnized:
   - On Windows:
   
-      cd C:\adb
-      adb devices
+        cd C:\adb
+        adb devices
   - On Linux: `adb devices`
 
 _The device may ask you if the computer is trusted, choose yes._
 1. Restart ADB as root:
 
-  adb root
+    adb root
 1. Remount `/system` as `rw` (read-write)
 
-  adb remount
+    adb remount
 1. Download my `build.prop` from [here](https://github.com/tfhavingfun/OPO-mic-fix/releases).
 1. Push the modified version of `build.prop` (my version) to your device.
 
-  adb push build.prop /system/build.prop
+    adb push build.prop /system/build.prop
 1. Check the file permission:
 
-  adb shell
-  ls -l /system/build.prop
+    adb shell
+    ls -l /system/build.prop
 
 if it's not 644, then you need to fix the permission:
     chmod 644 /system/build.prop
@@ -41,4 +41,4 @@ if it's not 644, then you need to fix the permission:
 _Watch for typos before you press Enter, otherwise you could fuck up your system._
 1. Reboot your device:
 
-  adb reboot
+    adb reboot
