@@ -15,8 +15,8 @@ I won't go into option one here, cuz I think it's more  convenient to just do it
 1. Check if your device is reocgnized:
   - On Windows:
   
-        cd C:\adb
-        adb devices
+            cd C:\adb
+            adb devices
   - On Linux: `adb devices`
 
 1. Restart ADB as root:
