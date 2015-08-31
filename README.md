@@ -24,7 +24,7 @@ I won't go into details here about option one, cuz I think it's more safe and co
 1. Remount `/system` as `rw` (read-write)
 
         adb remount
-1. Download my already modified `build.prop` from [here](https://github.com/tfhavingfun/OPO-mic-fix/releases).
+1. Download my already modified `build.prop` [here](https://github.com/tfhavingfun/OPO-mic-fix/releases).
 1. Push the modified version of `build.prop` (my version) to your device.
 
         adb push build.prop /system/build.prop
@@ -40,9 +40,9 @@ I won't go into details here about option one, cuz I think it's more safe and co
         adb reboot
 ##FAQ:
 ###1. What exactly have you changed in the `build.prop` file?
-          ## Commented the next line out to fix the mic issue
-          #ro.qc.sdk.audio.fluencetype=fluence
-          ## Added the next two lines to fix the mic issue
-          persist.audio.fluence.voicerec=false
-          persist.audio.fluence.speaker=false
+       ## Commented the next line out to fix the mic issue
+       #ro.qc.sdk.audio.fluencetype=fluence
+       ## Added the next two lines to fix the mic issue
+       persist.audio.fluence.voicerec=false
+       persist.audio.fluence.speaker=false
       Nothing else.
