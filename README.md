@@ -11,15 +11,14 @@ _Please note that your device has to be rooted to edit the `build.prop` file._
 1. We need to use adb:
   - Windows users can get this [adb/fastboot installer](http://forum.xda-developers.com/showthread.php?t=2588979). It automatically places a fastboot/adb folder on your C drive (C:\adb).
   - Linux users can search for the relevant android-tools package in your package manager.
-1. Make sure your have enabled USB debugging on your phone.
-1. Check if your device if reocgnized:
+1. Make sure your have enabled USB debugging on your phone and connect your phone to your computer.
+1. Check if your device is reocgnized:
   - On Windows:
   
-        cd C:\adb
-        adb devices
+    cd C:\adb
+    adb devices
   - On Linux: `adb devices`
 
-_The device may ask you if the computer is trusted, choose yes._
 1. Restart ADB as root:
 
     adb root
@@ -39,6 +38,7 @@ if it's not 644, then you need to fix the permission:
     chmod 644 /system/build.prop
 
 _Watch for typos before you press Enter, otherwise you could fuck up your system._
+
 1. Reboot your device:
 
     adb reboot
