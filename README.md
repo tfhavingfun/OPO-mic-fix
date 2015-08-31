@@ -32,7 +32,7 @@ I won't go into details here about option one, cuz I think it's more safe and co
 
         adb shell
         ls -l /system/build.prop
-   if it's not 644, then you need to fix the permission (**Watch for typos before you press Enter, otherwise you could fuck up your system**):
+   if it's not 644, then you need to fix the permission (**Watch for typos before you press Enter, otherwise it could fuck up your system**):
 
         chmod 644 /system/build.prop
 1. Reboot your device:
@@ -40,9 +40,9 @@ I won't go into details here about option one, cuz I think it's more safe and co
         adb reboot
 ##FAQ:
 ###1. What exactly have you changed in the `build.prop` file?
-          ## Commented the next line out to fix the mic issue
-          #ro.qc.sdk.audio.fluencetype=fluence
-          ## Added the next two lines to fix the mic issue
-          persist.audio.fluence.voicerec=false
-          persist.audio.fluence.speaker=false
+        ## Commented the next line out to fix the mic issue
+        #ro.qc.sdk.audio.fluencetype=fluence
+        ## Added the next two lines to fix the mic issue
+        persist.audio.fluence.voicerec=false
+        persist.audio.fluence.speaker=false
       Nothing else.
